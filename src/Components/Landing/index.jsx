@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
+import { atom, useAtom } from 'jotai';
 import './index.css';
+
+export const pageAtom = atom(null);
 
 const debounce = (func, delay) => {
     let timeoutId;
@@ -12,6 +15,8 @@ const debounce = (func, delay) => {
 }
 
 export const Landing = () => {
+    const [page, setPage] = useAtom(pageAtom);
+
     useEffect(() => {
         let appending = true;
 
@@ -23,6 +28,11 @@ export const Landing = () => {
             if (windowHeight + scrollY >= bodyHeight - 300 && appending) {
                 const originalNode = document.querySelector('.landing-column');
                 const clonedNode = originalNode.cloneNode(true);
+
+                clonedNode.querySelectorAll('.portal').forEach((element) => {
+                    element.addEventListener('click', handleClick);
+                });
+
                 document.querySelector('.landing-container').appendChild(clonedNode);
             }
         }
@@ -38,6 +48,11 @@ export const Landing = () => {
                 if (windowHeight + scrollY >= bodyHeight) {
                     const originalNode = document.querySelector('.landing-column');
                     const clonedNode = originalNode.cloneNode(true);
+
+                    clonedNode.querySelectorAll('.portal').forEach((element) => {
+                        element.addEventListener('click', handleClick);
+                    });
+
                     document.querySelector('.landing-container').appendChild(clonedNode);
                 }
             }
@@ -53,21 +68,25 @@ export const Landing = () => {
         };
     });
 
+    const handleClick = (e) => {
+        setPage(e.target.parentElement.dataset.value)
+    }
+
     return (
         <>
             <div className='landing-container'>
                 <div className="landing-column">
-                    <div className='null'>
+                    <div className='null portal' data-value='null-page' onClick={(e) => {handleClick(e)}}>
                         <h1>Null</h1>
                         <p>Coming soon 2024</p>
                         <div className='segmentation-block'></div>
                     </div>
-                    <div className='infinite'>
+                    <div className='infinite portal' data-value='infinite-page' onClick={(e) => {handleClick(e)}}>
                         <h1>I(n)finite</h1>
                         <p>2023</p>
                         <div className='segmentation-block'></div>
                     </div>
-                    <div className='e_go'>
+                    <div className='e_go portal' data-value='e_go-page' onClick={(e) => {handleClick(e)}}>
                         <h1>E_GO</h1>
                         <p>2019</p>
                         <div className='segmentation-block'></div>
