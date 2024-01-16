@@ -10,3 +10,18 @@ body, html {
     height: auto;
     width: 100vw;
 }
+
+h1, p {
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Gian';
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Helvetica';
+    font-weight: lighter;
+    opacity: 0.85;
+}
