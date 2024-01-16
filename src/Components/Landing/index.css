@@ -9,6 +9,7 @@
         font-size: xxx-large;
         text-transform: uppercase;
         margin-bottom: 0;
+        position: relative;
     }
 
     p {
@@ -30,4 +31,46 @@
     height: 200px;
     width: 1px;
     border-left: dashed 3px #fff; 
+}
+
+.e_go.portal {
+    cursor: pointer;
+
+    h1, p {
+        position: relative;
+        z-index: 1;
+    }
+    .video-bg-container {
+        position: absolute; 
+        transform: scale(0.1);
+        translate: 0 -42%;
+    }
+}
+
+.infinite.portal {
+    cursor: pointer;
+
+    h1, p {
+        position: relative;
+        z-index: 1;
+    }
+    .video-bg-container {
+        position: absolute; 
+        transform: scale(0.1);
+        translate: 0 -42%;
+    }
+}
+
+.null.portal {
+    cursor: pointer;
+    
+    h1, p {
+        position: relative;
+        z-index: 1;
+    }
+    .video-bg-container {
+        position: absolute; 
+        transform: scale(0.1);
+        translate: 0 -42%;
+    }
 }

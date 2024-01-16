@@ -2,6 +2,10 @@ import { useEffect } from 'react';
 import { atom, useAtom } from 'jotai';
 import './index.css';
 
+import E_GO_LOOP from '../../Assets/E_GO/EGO_LOOP.mp4';
+import INFINITE_LOOP from '../../Assets/INFINITE/I(N)FINITE_LOOP.mp4';
+import NULL_LOOP from '../../Assets/NULL/NULL_LOOP.mp4';
+
 export const pageAtom = atom(null);
 
 const debounce = (func, delay) => {
@@ -77,16 +81,31 @@ export const Landing = () => {
             <div className='landing-container'>
                 <div className="landing-column">
                     <div className='null portal' data-value='null-page' onClick={(e) => {handleClick(e)}}>
+                        <div className='video-bg-container'>
+                            <video loop muted autoPlay>
+                                <source src={NULL_LOOP} type='video/mp4' />
+                            </video>
+                        </div>
                         <h1>Null</h1>
                         <p>Coming soon 2024</p>
                         <div className='segmentation-block'></div>
                     </div>
                     <div className='infinite portal' data-value='infinite-page' onClick={(e) => {handleClick(e)}}>
+                        <div className='video-bg-container'>
+                            <video loop muted autoPlay>
+                                <source src={INFINITE_LOOP} type='video/mp4' />
+                            </video>
+                        </div>
                         <h1>I(n)finite</h1>
                         <p>2023</p>
                         <div className='segmentation-block'></div>
                     </div>
                     <div className='e_go portal' data-value='e_go-page' onClick={(e) => {handleClick(e)}}>
+                        <div className='video-bg-container'>
+                            <video loop muted autoPlay>
+                                <source src={E_GO_LOOP} type='video/mp4' />
+                            </video>
+                        </div>
                         <h1>E_GO</h1>
                         <p>2019</p>
                         <div className='segmentation-block'></div>
