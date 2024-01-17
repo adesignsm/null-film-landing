@@ -6,6 +6,7 @@ import { E_GO } from "./Components/E_GO"
 import { INFINITE } from './Components/INFINITE';
 import { NULL } from './Components/NULL';
 import { useAtom } from 'jotai';
+import { EmailPopUp } from './Components/EmailPopUp';
 
 export const App = () => {
     const [page] = useAtom(pageAtom);
@@ -17,6 +18,7 @@ export const App = () => {
                 <E_GO />
                 <INFINITE />
                 <NULL />
+                <EmailPopUp />
             </main>
         </>
     )
