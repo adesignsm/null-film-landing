@@ -20,7 +20,7 @@ export const INFINITE = () => {
 
     return (
         <>
-            <div className={`infinite-container ${page === null ? 'hide' : 'show'}`}>
+            <div className={`infinite-container ${page === 'infinite-page' ? 'show' : 'hide'}`}>
                 <div className='close-button-container'>
                     <img src={CLOSE_ICON} onClick={handleClick}/>
                 </div>
@@ -29,7 +29,6 @@ export const INFINITE = () => {
                         url='https://player.vimeo.com/video/792515906?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' 
                         controls
                         className='video-player'
-                        width={400}
                     />
                 </div>
                 <div className='copy-content'>
@@ -40,6 +39,8 @@ export const INFINITE = () => {
                     <div className='description-container'>
                         <p>
                             “I(N)FINITE” - The individual's identity is neither lost nor created; it is constantly transformed. 
+                            <br />
+                            <br />
                             Second group collaboration. Shot in Toronto, Canada. Directed by: Alim Sabir, Choreography 
                             by: Eric Cheung, Creative Direction by: Sebastian Palencia, Cinematography by: Bradley Stuckel, 
                             Produced by: Imad Elsheikh, VFX by: Luke Bellissimo

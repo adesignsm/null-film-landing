@@ -56,7 +56,7 @@
     }
     .video-bg-container {
         position: absolute; 
-        transform: scale(0.1);
+        transform: scale(0.14);
         translate: 0 -42%;
     }
 }

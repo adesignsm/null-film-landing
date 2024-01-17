@@ -1,0 +1,93 @@
+.null-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    padding: 2rem;
+    background-color: #000;
+    z-index: 9;
+    overflow-y: scroll;
+
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .7s ease-in-out;
+    }
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity .7s ease-in-out;
+    }
+}
+
+.close-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    img {
+        margin-right: 4rem;
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}
+
+.null-container .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    .video-player {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 185px !important;
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    iframe {
+        width: 100vw !important;
+        height: 100% !important;
+    }
+}
+
+.null-container .copy-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    .title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    .description-container {
+        width: 90vw;
+    }
+}
+
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    width: 90vw;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+}
