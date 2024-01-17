@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     width: 90vw;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
 
     .video-player {
@@ -84,7 +84,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
     width: 90vw;
-    margin-top: 2rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
 
     .image {
         max-width: 100%;
