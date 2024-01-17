@@ -1,4 +1,4 @@
-.infinite-container {
+.null-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
     }
 }
 
-.infinite-container.video-container {
+.video-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +60,7 @@
     }
 }
 
-.copy-content {
+.null-container.copy-content {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -68,8 +68,9 @@
     .title-container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         width: 90vw;
+        flex-direction: column;
     }
 
     .description-container {
