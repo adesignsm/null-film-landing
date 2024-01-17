@@ -7,6 +7,7 @@
     padding: 2rem;
     background-color: #000;
     z-index: 9;
+    overflow-y: scroll;
 
     &.hide {
         opacity: 0;
@@ -47,7 +48,7 @@
         align-items: center;
         width: auto !important;
         height: auto !important;
-        transform: scale(1.2);
+        transform: scale(1.3);
 
         div {
             display: flex;
@@ -75,5 +76,18 @@
 
     .description-container {
         width: 90vw;
+    }
+}
+
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    width: 90vw;
+    margin-top: 2rem;
+
+    .image {
+        max-width: 100%;
+        height: auto;
     }
 }
