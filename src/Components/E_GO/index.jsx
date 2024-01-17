@@ -20,7 +20,7 @@ export const E_GO = () => {
 
     return (
         <>
-            <div className={`e_go-container ${page === null ? 'hide' : 'show'}`}>
+            <div className={`e_go-container ${page === 'e_go-page' ? 'show' : 'hide'}`}>
                 <div className='close-button-container'>
                     <img src={CLOSE_ICON} onClick={handleClick}/>
                 </div>

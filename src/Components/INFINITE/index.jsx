@@ -20,7 +20,7 @@ export const INFINITE = () => {
 
     return (
         <>
-            <div className={`infinite-container ${page === null ? 'hide' : 'show'}`}>
+            <div className={`infinite-container ${page === 'infinite-page' ? 'show' : 'hide'}`}>
                 <div className='close-button-container'>
                     <img src={CLOSE_ICON} onClick={handleClick}/>
                 </div>
