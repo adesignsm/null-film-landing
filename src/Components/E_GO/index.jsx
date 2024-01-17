@@ -4,6 +4,11 @@ import { useAtom } from 'jotai';
 import { pageAtom } from '../Landing';
 
 import CLOSE_ICON from '../../Assets/Icons/close.png';
+import IMAGE1 from '../../Assets/E_GO/ego-bts-01.png';
+import IMAGE2 from '../../Assets/E_GO/ego-bts-02.png';
+import IMAGE3 from '../../Assets/E_GO/ego-bts-03.png';
+import IMAGE4 from '../../Assets/E_GO/ego-bts-04.png';
+
 import './index.css';
 
 export const E_GO = () => {
@@ -43,7 +48,10 @@ export const E_GO = () => {
                     </div>
                 </div>
                 <div className='media-container'>
-                    
+                    <img className='image' src={IMAGE1} />
+                    <img className='image' src={IMAGE2} />
+                    <img className='image' src={IMAGE3} />
+                    <img className='image' src={IMAGE4} />
                 </div>
             </div>
         </>
