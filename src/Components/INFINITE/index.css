@@ -13,13 +13,13 @@
 .infinite-container.hide {
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .infinite-container.show {
     opacity: 1;
     pointer-events: all;
-    transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .close-button-container {

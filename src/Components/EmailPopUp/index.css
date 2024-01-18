@@ -9,7 +9,7 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-    transition: backdrop-filter 2s ease-in-out;
+    transition: backdrop-filter 1s ease-in-out;
 }
 
 .email-popup-container.hide {
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     opacity: 1;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .email-popup.hide {

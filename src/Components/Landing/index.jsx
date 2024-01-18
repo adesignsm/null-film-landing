@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { atom, useAtom } from 'jotai';
 import './index.css';
 
@@ -7,6 +7,7 @@ import INFINITE_LOOP from '../../Assets/INFINITE/I(N)FINITE_LOOP.mp4';
 import NULL_LOOP from '../../Assets/NULL/NULL_LOOP.mp4';
 
 export const pageAtom = atom(null);
+export const loadedAtom = atom(false);
 
 const debounce = (func, delay) => {
     let timeoutId;
@@ -20,6 +21,12 @@ const debounce = (func, delay) => {
 
 export const Landing = () => {
     const [page, setPage] = useAtom(pageAtom);
+    const [loaded, setLoaded] = useAtom(loadedAtom);
+    const [videosLoaded, setVideosLoaded] = useState({
+        null: false,
+        infinite: false,
+        ego: false,
+    });
 
     useEffect(() => {
         let appending = true;
@@ -72,6 +79,21 @@ export const Landing = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (videosLoaded.null && videosLoaded.infinite && videosLoaded.ego) {
+            console.log('videos loaded');
+            setLoaded(true);
+        }
+    }, [videosLoaded]);
+
+    const handleVideoLoad = (videoKey) => {
+        setVideosLoaded((prevVideosLoaded) => ({
+            ...prevVideosLoaded,
+            [videoKey]: true,
+        }));
+    };
+      
+
     const handleClick = (e) => {
         setPage(e.target.parentElement.dataset.value)
     }
@@ -82,7 +104,14 @@ export const Landing = () => {
                 <div className="landing-column">
                     <div className='null portal' data-value='null-page' onClick={(e) => {handleClick(e)}}>
                         <div className='video-bg-container'>
-                            <video className='null-video video' loop autoPlay controls={false} playsInline>
+                            <video 
+                                className='null-video video' 
+                                loop 
+                                autoPlay 
+                                controls={false} 
+                                playsInline
+                                onLoadedData={() => handleVideoLoad('null')}
+                            >
                                 <source src={NULL_LOOP} type='video/mp4' />
                             </video>
                         </div>
@@ -92,7 +121,14 @@ export const Landing = () => {
                     </div>
                     <div className='infinite portal' data-value='infinite-page' onClick={(e) => {handleClick(e)}}>
                         <div className='video-bg-container'>
-                            <video className='infinite-video video' loop muted={true} autoPlay controls={false} playsInline>
+                            <video 
+                                className='infinite-video video' 
+                                loop
+                                autoPlay 
+                                controls={false} 
+                                playsInline
+                                onLoadedData={() => handleVideoLoad('infinite')}
+                            >
                                 <source src={INFINITE_LOOP} type='video/mp4' />
                             </video>
                         </div>
@@ -102,7 +138,14 @@ export const Landing = () => {
                     </div>
                     <div className='e_go portal' data-value='e_go-page' onClick={(e) => {handleClick(e)}}>
                         <div className='video-bg-container'>
-                            <video className='ego-video video' loop autoPlay controls={false} playsInline>
+                            <video 
+                                className='ego-video video' 
+                                loop 
+                                autoPlay 
+                                controls={false} 
+                                playsInline
+                                onLoadedData={() => handleVideoLoad('ego')}
+                            >
                                 <source src={EGO_LOOP} type='video/mp4' />
                             </video>
                         </div>
