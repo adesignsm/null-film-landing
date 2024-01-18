@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { push, ref } from "firebase/database";
 import { db } from "../../firebase";
 
+import CLOSE_ICON from '../../Assets/Icons/close.png';
 import './index.css';
 
 export const EmailPopUp = () => {
     const [email, setEmail] = useState('');
     const [emailSuccess, setEmailSuccess] = useState(false);
+    const [closeEmail, setCloseEmail] = useState(false);
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -18,6 +20,10 @@ export const EmailPopUp = () => {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
           );
     };
+
+    const handleClick = () => {
+        setCloseEmail(true);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -60,8 +66,11 @@ export const EmailPopUp = () => {
 
     return (
         <>
-            <div className={`email-popup-container ${emailSuccess ? 'hide' : ''}`}>
-                <div className={`email-popup ${emailSuccess ? 'hide' : ''}`}>
+            <div className={`email-popup-container ${emailSuccess || closeEmail ? 'hide' : ''}`}>
+                <div className={`email-popup ${emailSuccess || closeEmail ? 'hide' : ''}`}>
+                    <div className='close-button-container'>
+                        <img src={CLOSE_ICON} onClick={handleClick}/>
+                    </div>
                     <div className='copy'>
                         <h1>Newsletter</h1>
                         <p>

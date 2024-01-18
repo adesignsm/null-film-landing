@@ -82,7 +82,7 @@ export const Landing = () => {
                 <div className="landing-column">
                     <div className='null portal' data-value='null-page' onClick={(e) => {handleClick(e)}}>
                         <div className='video-bg-container'>
-                            <video className='null-video video' loop autoPlay>
+                            <video className='null-video video' loop autoPlay controls={false} playsInline>
                                 <source src={NULL_LOOP} type='video/mp4' />
                             </video>
                         </div>
@@ -92,7 +92,7 @@ export const Landing = () => {
                     </div>
                     <div className='infinite portal' data-value='infinite-page' onClick={(e) => {handleClick(e)}}>
                         <div className='video-bg-container'>
-                            <video className='infinite-video video' loop muted={true} autoPlay>
+                            <video className='infinite-video video' loop muted={true} autoPlay controls={false} playsInline>
                                 <source src={INFINITE_LOOP} type='video/mp4' />
                             </video>
                         </div>
@@ -102,7 +102,7 @@ export const Landing = () => {
                     </div>
                     <div className='e_go portal' data-value='e_go-page' onClick={(e) => {handleClick(e)}}>
                         <div className='video-bg-container'>
-                            <video className='ego-video video' loop autoPlay>
+                            <video className='ego-video video' loop autoPlay controls={false} playsInline>
                                 <source src={EGO_LOOP} type='video/mp4' />
                             </video>
                         </div>

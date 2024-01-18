@@ -9,7 +9,7 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-    transition: backdrop-filter 3s ease-in-out;
+    transition: backdrop-filter 2s ease-in-out;
 
     &.hide {
         backdrop-filter: blur(0px);
@@ -26,11 +26,25 @@
         justify-content: center;
         align-items: center;
         opacity: 1;
-        transition: opacity 3s ease-in-out;
+        transition: opacity 2s ease-in-out;
 
         &.hide {
             opacity: 0;
             pointer-events: none;
+        }
+
+        .close-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            margin-top: -2rem;
+            margin-right: -4rem;
+        
+            img {
+                margin-right: 0;
+                cursor: pointer;
+                transform: scale(1);
+            }
         }
 
         .copy {
