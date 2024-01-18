@@ -10,94 +10,93 @@
     align-items: center;
     justify-content: center;
     transition: backdrop-filter 2s ease-in-out;
+}
 
-    &.hide {
-        backdrop-filter: blur(0px);
-        pointer-events: none;
+.email-popup-container.hide {
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+}
+
+.email-popup {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: 3rem;
+    max-width: 65vw;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.email-popup.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.email-popup .close-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -2rem;
+    margin-right: -11.5rem;
+
+    img {
+        margin-right: 0;
+        cursor: pointer;
+        transform: scale(1);
     }
+}
 
-    .email-popup {
-        display: flex;
-        flex-direction: column;
-        background-color: #000;
-        border: 1px solid #fff;
-        padding: 3rem;
-        max-width: 65vw;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transition: opacity 2s ease-in-out;
+.email-popup .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
-        &.hide {
-            opacity: 0;
-            pointer-events: none;
-        }
+.email-popup .copy h1 {
+    font-weight: lighter;
+    margin-bottom: 0;
+}
 
-        .close-button-container {
-            width: 100%;
-            display: flex;
-            justify-content: end;
-            margin-top: -2rem;
-            margin-right: -4rem;
-        
-            img {
-                margin-right: 0;
-                cursor: pointer;
-                transform: scale(1);
-            }
-        }
+.email-popup .copy p {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
 
-        .copy {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 1rem;
+.email-popup .form-container {
+    width: 100%;
+    margin-bottom: 1rem;
+}
 
-            h1 {
-                font-weight: lighter;
-                margin-bottom: 0;
-            }
+.email-popup .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-            p {
-                margin-top: 0.5rem;
-                opacity: 0.8;
-            }
-        }
-
-        .form-container {
-            width: 100%;
-            margin-bottom: 1rem;
-
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-
-                input[type=text] {
-                    background-color: #515151;
-                    border: none;
-                    height: 30px;
-                    flex-shrink: 0; 
-                    font-size: 1em;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .submit {
-                    background-color: #000;
-                    border: 1px solid #fff;
-                    text-transform: uppercase;
-                    color: #fff;
-                    font-family: 'Gian';
-                    opacity: 0.81;
-                    padding: 0.5rem;
-                    cursor: pointer;
-                }
-            }
-        }
+.email-popup .form-container form input[type=text] {
+    background-color: #515151;
+    border: none;
+    height: 30px;
+    flex-shrink: 0; 
+    font-size: 1em;
+    &:focus {
+        outline: none;
     }
+}
+
+.email-popup .form-container form .submit {
+    background-color: #000;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gian';
+    opacity: 0.81;
+    padding: 0.5rem;
+    cursor: pointer;
 }
