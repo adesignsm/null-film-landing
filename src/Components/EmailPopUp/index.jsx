@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { push, ref } from "firebase/database";
 import { db } from "../../firebase";
 
@@ -22,7 +22,7 @@ export const EmailPopUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        let isValid = true;
+        let isValid = true; 
         const errors = {};
     
         if (email.trim() === "") {
