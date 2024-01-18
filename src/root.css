@@ -19,6 +19,13 @@ h1, p {
 h1 {
     font-family: 'Gian';
     text-transform: uppercase;
+    color: #FFF;
+    font-family: Giane;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.336px;
+    text-transform: uppercase;
 }
 
 p {

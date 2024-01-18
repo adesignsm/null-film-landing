@@ -4,7 +4,7 @@
     left: 0;
     height: 100%;
     width: 100vw;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #000;
     z-index: 9;
     overflow-y: scroll;
@@ -34,7 +34,7 @@
     }
 }
 
-.e_go-container.video-container {
+.e_go-container .video-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: auto !important;
+        height: 185px !important;
 
         div {
             display: flex;
@@ -55,12 +55,12 @@
     }
 
     iframe {
-        width: 100vw !important;
+        width: 90vw !important;
         height: 100% !important;
     }
 }
 
-.copy-content {
+.e_go-container .copy-content {
     display: flex;
     flex-direction: column;
     width: 100vw;

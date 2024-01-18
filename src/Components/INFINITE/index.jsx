@@ -29,7 +29,7 @@ export const INFINITE = () => {
                         url='https://player.vimeo.com/video/792515906?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' 
                         controls
                         className='video-player'
-                        height={280}
+                        key='infinite-video'
                     />
                 </div>
                 <div className='copy-content'>

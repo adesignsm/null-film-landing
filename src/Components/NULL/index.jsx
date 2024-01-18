@@ -20,11 +20,11 @@ export const NULL = () => {
                     <img src={CLOSE_ICON} onClick={handleClick}/>
                 </div>
                 <div className='video-container'>
-                    <ReactPlayer 
-                        url='https://player.vimeo.com/video/314690744?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' 
+                    <ReactPlayer
+                        url='https://player.vimeo.com/video/896039872?h=6a3f22bc4c&amp;badge=0&amp;autoplay=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' 
                         controls
                         className='video-player'
-                        height={280}
+                        key='null-video'
                     />
                 </div>
                 <div className='copy-content'>
