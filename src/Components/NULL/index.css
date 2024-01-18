@@ -4,7 +4,7 @@
     left: 0;
     height: 100%;
     width: 100vw;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #000;
     z-index: 9;
     overflow-y: scroll;
@@ -55,7 +55,7 @@
     }
 
     iframe {
-        width: 100vw !important;
+        width: 90vw !important;
         height: 100% !important;
     }
 }
@@ -71,6 +71,11 @@
         align-items: flex-start;
         width: 90vw;
         flex-direction: column;
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     .description-container {
