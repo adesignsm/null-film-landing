@@ -20,7 +20,7 @@ export const E_GO = () => {
 
     return (
         <>
-            <div className={`e_go-container ${page === null ? 'hide' : 'show'}`}>
+            <div className={`e_go-container ${page === 'e_go-page' ? 'show' : 'hide'}`}>
                 <div className='close-button-container'>
                     <img src={CLOSE_ICON} onClick={handleClick}/>
                 </div>
@@ -29,7 +29,7 @@ export const E_GO = () => {
                         url='https://player.vimeo.com/video/314690744?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' 
                         controls
                         className='video-player'
-                        width={400}
+                        key='ego-video'
                     />
                 </div>
                 <div className='copy-content'>
