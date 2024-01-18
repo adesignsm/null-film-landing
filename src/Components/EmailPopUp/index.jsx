@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { push, ref } from "firebase/database";
 import { db } from "../../firebase";
 
+import CLOSE_ICON from '../../Assets/Icons/close.png';
 import './index.css';
 
 export const EmailPopUp = () => {
     const [email, setEmail] = useState('');
     const [emailSuccess, setEmailSuccess] = useState(false);
+    const [closeEmail, setCloseEmail] = useState(false);
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -19,10 +21,14 @@ export const EmailPopUp = () => {
           );
     };
 
+    const handleClick = () => {
+        setCloseEmail(true);
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        let isValid = true;
+        let isValid = true; 
         const errors = {};
     
         if (email.trim() === "") {
@@ -60,8 +66,11 @@ export const EmailPopUp = () => {
 
     return (
         <>
-            <div className={`email-popup-container ${emailSuccess ? 'hide' : ''}`}>
-                <div className={`email-popup ${emailSuccess ? 'hide' : ''}`}>
+            <div className={`email-popup-container ${emailSuccess || closeEmail ? 'hide' : ''}`}>
+                <div className={`email-popup ${emailSuccess || closeEmail ? 'hide' : ''}`}>
+                    <div className='close-button-container'>
+                        <img src={CLOSE_ICON} onClick={handleClick}/>
+                    </div>
                     <div className='copy'>
                         <h1>Newsletter</h1>
                         <p>
