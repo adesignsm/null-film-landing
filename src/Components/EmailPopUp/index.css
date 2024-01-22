@@ -40,7 +40,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: -2rem;
-    margin-right: -11.5rem;
+    margin-right: -3.5rem;
 
     img {
         margin-right: 0;
@@ -66,6 +66,8 @@
 .email-popup .copy p {
     margin-top: 0.5rem;
     opacity: 0.8;
+    font-family: 'Gian';
+    text-transform: uppercase;
 }
 
 .email-popup .form-container {
@@ -85,6 +87,7 @@
     height: 30px;
     flex-shrink: 0; 
     font-size: 1em;
+    color: #fff;
     &:focus {
         outline: none;
     }

@@ -29,11 +29,11 @@
 .segmentation-block {
     max-height: 200px;
     max-width: 1px;
-    height: 150px;
+    height: 100px;
     width: 1px;
     border-left: dashed 3px #fff;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .e_go.portal, .infinite.portal, .null.portal {
@@ -51,6 +51,6 @@
 .infinite.portal .video-bg-container,
 .null.portal .video-bg-container {
     position: absolute;
-    transform: scale(0.12);
+    transform: scale(0.16);
     translate: 0 -44%;
 }
