@@ -72,7 +72,6 @@ export const EmailPopUp = () => {
                         <img src={CLOSE_ICON} onClick={handleClick}/>
                     </div>
                     <div className='copy'>
-                        <h1>Newsletter</h1>
                         <p>
                             Welcome to a collection of a growing collaboration between Eric Cheung, Alim Sabir, and Sebastian Palencia 
                             <br />
@@ -90,7 +89,7 @@ export const EmailPopUp = () => {
                                 required 
                                 placeholder='Email'
                             />
-                            <button className='submit' type="submit">Subscribe</button>
+                            <button className='submit' type="submit">Enter</button>
                         </form>
                     </div>
                 </div>

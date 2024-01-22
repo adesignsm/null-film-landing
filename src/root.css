@@ -9,6 +9,7 @@ body, html {
     background-color: #000;
     height: auto;
     width: 100vw;
+    padding-top: 2rem;
 }
 
 h1, p {
