@@ -116,7 +116,7 @@ export const Landing = () => {
                             </video>
                         </div>
                         <h1>Null</h1>
-                        <p>Coming soon 2024</p>
+                        <p>Coming 2024</p>
                         <div className='segmentation-block'></div>
                     </div>
                     <div className='infinite portal' data-value='infinite-page' onClick={(e) => {handleClick(e)}}>
@@ -133,7 +133,7 @@ export const Landing = () => {
                             </video>
                         </div>
                         <h1>I(n)finite</h1>
-                        <p>2023</p>
+                        <p>2022</p>
                         <div className='segmentation-block'></div>
                     </div>
                     <div className='e_go portal' data-value='e_go-page' onClick={(e) => {handleClick(e)}}>

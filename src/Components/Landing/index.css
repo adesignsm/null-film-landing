@@ -31,7 +31,7 @@
     max-width: 1px;
     height: 100px;
     width: 1px;
-    border-left: dashed 3px #fff;
+    border-left: dashed 2px #fff;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -53,4 +53,8 @@
     position: absolute;
     transform: scale(0.16);
     translate: 0 -44%;
+}
+
+.e_go.portal .video-bg-container {
+    translate: 0 -45%;
 }

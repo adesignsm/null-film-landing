@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { push, ref } from "firebase/database";
 import { db } from "../../firebase";
 
-import CLOSE_ICON from '../../Assets/Icons/close.png';
+import CLOSE_ICON from '../../Assets/Icons/close.svg';
 import './index.css';
 
 export const EmailPopUp = () => {
@@ -68,9 +68,6 @@ export const EmailPopUp = () => {
         <>
             <div className={`email-popup-container ${emailSuccess || closeEmail ? 'hide' : ''}`}>
                 <div className={`email-popup ${emailSuccess || closeEmail ? 'hide' : ''}`}>
-                    <div className='close-button-container'>
-                        <img src={CLOSE_ICON} onClick={handleClick}/>
-                    </div>
                     <div className='copy'>
                         <p>
                             Welcome to a collection of a growing collaboration between Eric Cheung, Alim Sabir, and Sebastian Palencia 
@@ -91,6 +88,9 @@ export const EmailPopUp = () => {
                             />
                             <button className='submit' type="submit">Enter</button>
                         </form>
+                        <div className='email-close-button-container'>
+                            <img src={CLOSE_ICON} onClick={handleClick}/>
+                        </div>
                     </div>
                 </div>
             </div>
