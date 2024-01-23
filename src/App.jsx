@@ -25,7 +25,7 @@ export const App = () => {
     return (
         <>
             <main className='page'>
-                <Loader load={isLoading} />
+                <Loader loading={isLoading} />
                 <EmailPopUp />
                 <Landing />
                 <E_GO />
