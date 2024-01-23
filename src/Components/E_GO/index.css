@@ -58,13 +58,13 @@
 .e_go-container .copy-content {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
 
     .title-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 100%;
     }
 
     .description-container {

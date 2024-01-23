@@ -30,17 +30,38 @@ export const NULL = () => {
                 <div className='copy-content'>
                     <div className='title-container'>
                         <h1> NULL </h1>
-                        <p> NULL 2024 COMING SOON</p>
+                        <p> NULL - Coming 2024</p>
                     </div>
-                    {/* <div className='description-container'>
+                    <div className='description-container'>
                         <p>
-                            “E_GO” is an analysis of the dualistic nature of the ego mind and its role in shaping one's 
-                            identity and perspective on oneself. First collaboration between Eric, Alim and Seb. Shot in 
-                            Vancouver, Canada. Directed by: Alim Sabir, Choreography by: Eric Cheung, Creative Direction by: 
-                            Sebastian Palencia 
-                            Medium: 35mm
+                            Directed by Alim Sabir
+                            <br />
+                            Choreography: Eric Cheung
+                            <br /> 
+                            Creative Director: Sebastian Palencia 
+                            <br />
+                            <br />
+                            Production: Spy Films
+                            <br />
+                            Executive Producer: Marcus Trulli 
+                            <br />
+                            Service Production Company: Escuro
+                            <br />
+                            Executive Producer: Keyon Slowly
+                            <br />
+                            Director of Photography: Jeremy Cox
+                            <br />
+                            Trailer Editor: Miguell Branco
+                            <br />
+                            Editor: Nick Yumil 
+                            <br />
+                            Colorist: Sam Gilling
+                            <br />
+                            VFX Composer: Leo Luxford
+                            <br />
+                            Original Score: Amine R. Bouzahe
                         </p>
-                    </div> */}
+                    </div>
                 </div>
                 {/* <div className='media-container'>
                     <img className='image' src={IMAGE1} />
