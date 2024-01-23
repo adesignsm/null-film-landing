@@ -40,9 +40,20 @@ export const E_GO = () => {
                     <div className='description-container'>
                         <p>
                             “E_GO” is an analysis of the dualistic nature of the ego mind and its role in shaping one's 
-                            identity and perspective on oneself. First collaboration between Eric, Alim and Seb. Shot in 
-                            Vancouver, Canada. Directed by: Alim Sabir, Choreography by: Eric Cheung, Creative Direction by: 
-                            Sebastian Palencia 
+                            identity and perspective on oneself. 
+                            <br />
+                            <br />
+                            First collaboration between Eric, Alim and Seb. Shot in 
+                            Vancouver, Canada. 
+                            <br />
+                            <br />
+                            Directed by Alim Sabir
+                            <br />
+                            Choreography: Eric Cheung
+                            <br />
+                            Creative Direction: Sebastian Palencia
+                            <br />
+                            <br />
                             Medium: 35mm
                         </p>
                     </div>

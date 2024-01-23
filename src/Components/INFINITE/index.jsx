@@ -35,16 +35,29 @@ export const INFINITE = () => {
                 <div className='copy-content'>
                     <div className='title-container'>
                         <h1> In(f)inite</h1>
-                        <p> 2023 </p>
+                        <p> 2022 </p>
                     </div>
                     <div className='description-container'>
                         <p>
                             “I(N)FINITE” - The individual's identity is neither lost nor created; it is constantly transformed. 
                             <br />
                             <br />
-                            Second group collaboration. Shot in Toronto, Canada. Directed by: Alim Sabir, Choreography 
-                            by: Eric Cheung, Creative Direction by: Sebastian Palencia, Cinematography by: Bradley Stuckel, 
-                            Produced by: Imad Elsheikh, VFX by: Luke Bellissimo
+                            Second group collaboration. Shot in Toronto, Canada.
+                            <br />
+                            <br />
+                            Directed by Alim Sabir
+                            <br />
+                            Choreography: Eric Cheung
+                            <br /> 
+                            Creative Direction: Sebastian Palencia 
+                            <br />
+                            Produced: Imad Elsheikh
+                            <br />
+                            Cinematography: Bradley Stuckel  
+                            <br />
+                            VFX: Luke Bellissimo
+                            <br />
+                            <br />
                             Medium: Digital
                         </p>
                     </div>
