@@ -85,3 +85,20 @@
     max-width: 100%;
     height: auto;
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1920px) {
+    .infinite-container .video-container {
+        width: 100vw;
+        margin-top: 7rem;
+    }
+
+    .infinite-container .video-container .video-player {
+        width: 100% !important;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .infinite-container .video-container .video-player div {
+        height: 400px !important;
+    }
+}

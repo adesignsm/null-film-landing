@@ -17,7 +17,6 @@ export const Loader = ({ loading }) => {
       }
     
       if (partOneAnimationEnded && partTwoAnimationEnded) {
-        console.log('Both animations have ended');
         setTimeout(() => {
             setAnimationDone(true);
         }, 500);
@@ -78,6 +77,11 @@ export const Loader = ({ loading }) => {
                             fill="white"
                         />
                     </svg>
+                </div>
+                <div className='credits-container'>
+                    <h1>Developed by
+                        <a href='https://www.instagram.com/hexstudio.io'> Hexstudio</a>
+                    </h1>
                 </div>
             </div>
         </>
