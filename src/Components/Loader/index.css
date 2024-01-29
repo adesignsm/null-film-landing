@@ -6,14 +6,16 @@
     backdrop-filter: blur(50px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     top: 0; 
+    flex-direction: column;
 }
 
 .loader .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50%;
 }
 
 .loader .logo svg {
@@ -28,10 +30,41 @@
 .loader .logo #part-two-animate {
     animation: drawPath 5s linear forwards;
 }
+
+.loader .credits-container h1 {
+    font-family: 'Gian';
+    font-size: small;
+    padding: 0 6rem;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 25px;
+    opacity: 0;
+    animation: animateCredits 5s linear forwards;
+}
+
+.loader .credits-container h1 > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@keyframes animateCredits {
+    to {
+        opacity: 0.5
+    }
+}
   
 @keyframes drawPath {
     to {
-      stroke-width: 100;
+      stroke-width: 50;
       stroke-dasharray: 0;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1920px) {
+    .loader {
+        justify-content: space-evenly;
+    }
+    .loader .logo {
+        transform: scale(0.5);
     }
 }

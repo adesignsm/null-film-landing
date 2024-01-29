@@ -105,3 +105,10 @@
     padding: 0.5rem;
     cursor: pointer;
 }
+
+
+@media only screen and (min-width: 769px) and (max-width: 1920px) {
+    .email-popup {
+        max-width: 20vw;
+    }
+}

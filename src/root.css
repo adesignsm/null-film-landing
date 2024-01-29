@@ -34,3 +34,9 @@ p {
     font-weight: lighter;
     opacity: 0.85;
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1920px) {
+    body, html {
+        height: 100%;
+    }
+}
