@@ -18,7 +18,7 @@ export const Loader = ({ loading }) => {
     
       if (partOneAnimationEnded && partTwoAnimationEnded) {
         setTimeout(() => {
-            setAnimationDone(false);
+            setAnimationDone(true);
         }, 500);
       }
     };
